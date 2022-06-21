@@ -1,0 +1,24 @@
+# On push 
+on: 
+  push:
+    branches:
+      - main
+# Executa este action que se chama "🚀 Deploy website on push"
+name: 🚀 Deploy website on push
+# Ações
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    # Roda um container
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: 144.22.199.40
+        username: admin_artur
+        password: pj%nwpOj-oOeI2tF
+        server-dir: pipe/
