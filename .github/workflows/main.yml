@@ -4,11 +4,11 @@ on:
     branches:
       - main
 # Executa este action que se chama "🚀 Deploy website on push"
-name: 🚀 Deploy website on push
+name: ST Pipeline
 # Ações
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     # Roda um container
     runs-on: ubuntu-latest
     steps:
